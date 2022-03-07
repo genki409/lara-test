@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// '/' → URLの名前
+// Route ファザード
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/sample', function () {
+//     return view('sample');
+// });
+
+Route::get('/sample', 'SampleController@index')->name('sample.index');
